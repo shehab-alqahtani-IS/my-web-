@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--shehab Al_Qahtani-->
+<html>
+<head>
+  <title>My Site</title>
+  <style>
+    /* CSS for logo */
+    #logo {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+    
+    /* CSS for site name */
+    h1 {
+      color: green;
+    }
+    
+    /* CSS for comments */
+    .comment {
+      background-color: yellow;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    /* CSS for approval and disapproval icons */
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+    
+    /* CSS for click counters */
+    .counter {
+      font-weight: bold;
+      color: red;
+    }
+    body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo ‫(1)‬.jpg" width="100" height="50"  alt="Logo">
+    </header>
+  <div id="logo"></div>
+  <h1>My Site</h1>
+  
+  <div class="comment">
+    <!-- Comment about site logo -->
+    <span class="icon">🌐</span>
+    <span>This logo represents our global presence.</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about site name -->
+    <span class="icon">📝</span>
+    <span>The site name represents the purpose or content of the site.</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about comments -->
+    <span class="icon">💬</span>
+    <span>Comments provide an interactive medium for users to share their thoughts and engage with the content.</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about approval and disapproval icons -->
+    <span class="icon">👍</span>
+    <span>The approval icon allows users to show their positive feedback or agreement.</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about approval and disapproval icons -->
+    <span class="icon">👎</span>
+    <span>The disapproval icon allows users to indicate their negative feedback or disagreement.</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about approval click counter -->
+    <span class="icon">👍</span>
+    <span>The approval click counter keeps track of the number of times the approval icon is clicked.</span>
+    <span class="counter">0</span>
+  </div>
+  
+  <div class="comment">
+    <!-- Comment about disapproval click counter -->
+    <span class="icon">👎</span>
+    <span>The disapproval click counter keeps track of the number of times the disapproval icon is clicked.</span>
+    <span class="counter">0</span>
+  </div>
+  
+  <script>
+    // JavaScript code to handle click events
+    
+    // Click event handler for approval icon
+    document.querySelector('#approvalIcon').addEventListener('click', function() {
+      // Increment the approval click counter by 1
+      var approvalCounter = document.querySelector('#approvalCounter');
+      approvalCounter.textContent = parseInt(approvalCounter.textContent) + 1;
+    });
+    
+    // Click event handler for disapproval icon
+    document.querySelector('#disapprovalIcon').addEventListener('click', function() {
+      // Increment the disapproval click counter by 1
+      var disapprovalCounter = document.querySelector('#disapprovalCounter');
+      disapprovalCounter.textContent = parseInt(disapprovalCounter.textContent) + 1;
+    });
+  </script>
+  <footer>
+    &copy; 2023 My Website. All rights reserved.Shehab AL-Qahtani IS
+</footer>
+</body>
+</html>

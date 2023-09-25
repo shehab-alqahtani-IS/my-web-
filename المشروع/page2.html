@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--shehab Al_Qahtani-->
+
+<html>
+<head>
+  <title>About Us</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo ‫(1)‬.jpg" width="100" height="50"  alt="Logo">
+    </header>
+
+  <section id="about-us">
+    <h2>About Us</h2>
+    <button type="button" id="show-form-btn">Contact Us</button>
+    <br><br><br><br>
+
+    <form id="communication-form" class="hidden" onsubmit="return submitForm(event)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required> <!-- We used input tag with type "text" to allow user to input their name and used the required attribute to ensure it 
+            is a mandatory field. -->
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required><!-- We used input tag with type "email" to allow user to input their email address. 
+            We used the required attribute to ensure it is a mandatory field. Depending on the web browser,
+             it will automatically perform email validation. -->
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" required> <!-- We used input tag with type "tel" to allow user to input their phone number.
+            We used the required attribute to ensure it is a mandatory field. Depending on the web browser,
+             it will automatically perform phone number validation. -->
+         
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required></textarea> <!-- We used textarea tag to allow user to input a message.
+            We used the required attribute to ensure it is a mandatory field. -->
+         
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" id="subscribe"><!-- We used input tag with type "checkbox" to allow user to subscribe to our newsletter.
+            We used the checked attribute to set it as checked by default. -->
+       
+            <label for="subscribe">Subscribe to newsletter</label> 
+             <!-- We used label tag to provide a text description for the checkbox.
+         We used the for attribute to associate it with the checkbox field. -->
+      </div>
+
+      <div class="form-group">
+        <label for="other">Other</label>
+        <input type="text" id="other">
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn">Submit</button> <!-- We used input tag with type "submit" to create a submit button for the form. -->
+      </div>
+    </form>
+
+    <div id="confirmation-msg" class="hidden">
+      <p>Thanks for the communication!</p>
+    </div>
+  </section>
+  
+
+  <script>
+    const showFormBtn = document.getElementById('show-form-btn');
+    const communicationForm = document.getElementById('communication-form');
+    const confirmationMsg = document.getElementById('confirmation-msg');
+
+    showFormBtn.addEventListener('click', function() {
+      communicationForm.classList.remove('hidden');
+    });
+
+    function submitForm(event) {
+      event.preventDefault();
+      communicationForm.classList.add('hidden');
+      confirmationMsg.classList.remove('hidden');
+      return false;
+    }
+  </script>
+  <footer>
+    &copy; 2023 My Website. All rights reserved.Shehab AL-Qahtani IS
+</footer>
+</body>
+</html>
+
+
+
